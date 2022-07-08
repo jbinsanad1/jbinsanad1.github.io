@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact us</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7203239f73.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="navBar.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #031E43;
+            font-family: Hack, monospace;
+        }
+
+        #contact {
+            background: url(images/CONTACT2-updated2.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-box {
+            width: clamp(100px, 90%, 1000px);
+            margin: 80px 50px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .contact-links,
+        .contact-form-wrapper {
+            width: 50%;
+            padding: 8% 5% 10% 5%;
+        }
+
+
+        .contact-links {
+            background: url(images/pawel-czerwinski-suLgJZ1edT4-unsplash.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            border-radius: 10px 0 0 10px;
+        }
+
+        .contact-form-wrapper {
+            background-color: #ffffff8f;
+            border-radius: 0 10px 10px 0;
+        }
+
+        @media only screen and (max-width: 800px) {
+
+            .contact-links,
+            .contact-form-wrapper {
+                width: 100%;
+            }
+
+            .contact-links {
+                border-radius: 10px 10px 0 0;
+            }
+
+            .contact-form-wrapper {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .contact-box {
+                width: 95%;
+                margin: 8% 5%;
+            }
+
+            .Social-Media {
+                margin-left: 30px;
+            }
+        }
+
+        h2 {
+            font-family: 'Arimo', sans-serif;
+            color: #fff;
+            font-size: clamp(30px, 6vw, 60px);
+            letter-spacing: 2px;
+            text-align: center;
+            transform: scale(.95, 1);
+        }
+
+        h3 {
+            font-family: 'Arimo', sans-serif;
+            color: #fff;
+            letter-spacing: 2px;
+            text-align: center;
+            transform: scale(.95, 1);
+            margin-top: 20px;
+        }
+
+        .Social-Media {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 26px;
+            color: #fff;
+            border-radius: 50%;
+            outline: 2px solid #fff;
+            transition-property: outline-offset, outline-color, background-color;
+            transition-duration: 0.25s;
+        }
+
+        .icon:hover {
+            outline-offset: 4px;
+        }
+
+        .icon:hover i {
+            animation: shake 0.25s;
+        }
+
+        .fa-instagram:hover {
+            background-image:
+                radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            outline-color: #a02d76;
+        }
+
+        .fa-twitter:hover {
+            background-color: #1da1f2;
+            outline-color: #1da1f2;
+        }
+
+        .fa-github:hover {
+            background-color: #2ea44f;
+            outline-color: #2ea44f;
+        }
+
+        .fa-linkedin-in:hover {
+            background-color: #0077b5;
+            outline-color: #0077b5;
+
+        }
+
+        .Social-Media a {
+
+            color: white;
+            padding-right: 30px;
+            font-size: 2.5em;
+            text-decoration: none;
+        }
+
+        .form-item {
+            position: relative;
+        }
+
+        label,
+        input,
+        textarea {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        label {
+            position: absolute;
+            top: 10px;
+            left: 2%;
+            color: #999;
+            font-size: clamp(14px, 1.5vw, 18px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            outline: 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 12px;
+            font-size: clamp(15px, 1.5vw, 18px);
+        }
+
+        input:focus+label,
+        input:valid+label,
+        textarea:focus+label,
+        textarea:valid+label {
+            font-size: clamp(13px, 1.3vw, 16px);
+            color: #777;
+            top: -20px;
+            transition: all .225s ease;
+        }
+
+        .submit-btn {
+            background-color: #0077b5;
+            filter: drop-shadow(2px 2px 3px #0003);
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+            font-size: clamp(16px, 1.6vw, 18px);
+            display: block;
+            padding: 12px 20px;
+            margin: 2px auto;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            user-select: none;
+            transition: 0.2s;
+        }
+
+        .submit-btn:hover {
+            transform: scale(1.1, 1.1);
+            background-color: #034569;
+        }
+
+        .submit-btn:active {
+            transform: scale(1.1, 1.1);
+            filter: sepia(0.5);
+        }
+
+        @media only screen and (max-width: 800px) {
+            h2 {
+                font-size: clamp(40px, 10vw, 60px);
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            h2 {
+                font-size: clamp(30px, 12vw, 60px);
+            }
+
+            .links {
+                padding-top: 30px;
+            }
+
+            .link img {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        footer {
+            position: fixed;
+            font-size: 12px;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            line-height: 60px;
+            font-size: 14px;
+            background-color: #032044;
+            color: white;
+            text-align: center;
+            font-family: Hack, monospace;
+        }
+
+        footer a{
+            text-decoration: none;
+            color: inherit;
+            border-bottom: 1px solid;
+
+            
+        }
+    </style>
+</head>
+
+<body>
+    <header class="primary-header flex">
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expaned="false"></button>
+        <div>
+            <a href="MainPage.html"><img id="logo" src="images/PicsArt_06-26-06.20.02.png"></a>
+        </div>
+        <nav>
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                <li class="active">
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="ProjectGallery.html">Projects</a>
+                </li>
+                <li>
+                    <a href="service.html">Services</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="contact">
+        <div class="contact-box">
+            <div class="contact-links">
+                <h2>Let's Get In Touch!</h2>
+                <h3>We love to hear from potential clients</h3>
+                <div class="Social-Media">
+                    <a href="#"><i class="icon fab fa-instagram"></i></a>
+                    <a href="#"><i class="icon fa-brands fa-twitter"></i></i></a>
+                    <a href="#"><i class="icon fa-brands fa-linkedin-in"></i></a>
+                    <a href="#"><i class="icon fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-wrapper">
+                <form action="https://formspree.io/f/mknyaakq" method="POST">
+                    <div class="form-item">
+                        <input type="text" name="sender" required>
+                        <label>Name:</label>
+                    </div>
+                    <div class="form-item">
+                        <input type="text" id="emailID" name="email" required>
+                        <label>Email:</label>
+                    </div>
+                    <div class="form-item">
+                        <textarea class="" name="message" required></textarea>
+                        <label>Message:</label>
+                    </div>
+                    <button class="submit-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-copyright text-center">&copy; Developed with ❤️</i> by Abdulla & Jasim</div>
+    </footer>
+
+
+    <script>
+        const primaryNav = document.querySelector('.primary-navigation');
+        const navToggle = document.querySelector('.mobile-nav-toggle')
+
+        navToggle.addEventListener('click', () => {
+            const visibility = primaryNav.getAttribute("data-visible")
+
+            if (visibility === "false") {
+                primaryNav.setAttribute("data-visible", true);
+                navToggle.setAttribute("aria-expanded", true)
+            } else {
+                primaryNav.setAttribute("data-visible", false)
+                navToggle.setAttribute("aria-expanded", false)
+            }
+        });
+
+    </script>
+</body>
+
+</html>
