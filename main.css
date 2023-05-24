@@ -132,14 +132,14 @@ width: 200px;
     transition-delay: 0s;
 }
 .container .serviceBox .service-icon i{
-    font-size: 10em;
+    font-size: 5em;
     color: #fff;
     transition: 0.5s;
     transition-delay: 0.25s;
 }
 
 .container .serviceBox:hover .service-icon i{
-    font-size: 4em;
+    font-size: 2em;
     transition-delay: 0s;
 }
 
