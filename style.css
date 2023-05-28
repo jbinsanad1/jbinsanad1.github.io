@@ -63,7 +63,7 @@ body{
 
 .home{
     height: 100vh;
-    background: url('IMAGES/CodeCrafterz-BG2.png') no-repeat;
+    background: url('images/CodeCrafterz-BG2.png') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
