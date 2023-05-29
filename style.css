@@ -777,14 +777,16 @@ span {
 
 /* Thank You Page */
 
+
 .container{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 200px 0;
-    width: 80%;
+    padding: 130px 0;
+    width: 46%;
     left: 10%;
+
 }
 
 .container p{
@@ -793,3 +795,10 @@ span {
    
 }
 
+@media (max-width: 35em){
+    .container{
+        padding: 20% 0;
+        width: 80%
+    }
+  
+}
