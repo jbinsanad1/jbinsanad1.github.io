@@ -773,3 +773,23 @@ span {
         width: 0;
     }
 }
+
+
+/* Thank You Page */
+
+.container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    width: 80%;
+    left: 10%;
+}
+
+.container p{
+    text-align:justify;
+    font-size: 2rem;
+   
+}
+
